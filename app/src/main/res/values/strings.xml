@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rolo Chat Test</string>
+
+    <string name="hint_empty_message">If you don’t enter a Subject, your message will be added to your direct conversation.</string>
+    <string name="hint_write_message">Write your message…</string>
+    <string name="hint_to">To</string>
+    <string name="hint_subject">Subject</string>
+    <string name="email_verify_error_message">Not a valid email. Please try a valid email address</string>
+    <string name="message_counter_hint">%d/%d</string>
+</resources>

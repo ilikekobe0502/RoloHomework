@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_contacts_content"
+    android:layout_width="wrap_content"
+    android:layout_height="23dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="9dp"
+    android:background="@drawable/rectangle_contact_withe_bg">
+
+    <TextView
+        android:id="@+id/textView_person"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:background="@drawable/rectangle_frame_to_field_personal_bg"
+        android:textColor="@color/color_4ACFF1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black50"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_person"
+        app:layout_constraintStart_toEndOf="@id/textView_person"
+        app:layout_constraintTop_toTopOf="@id/textView_person" />
+
+    <ImageView
+        android:id="@+id/imageView_remove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/ic_close_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textView_name"
+        app:layout_constraintTop_toTopOf="@id/textView_name" />
+</android.support.constraint.ConstraintLayout>

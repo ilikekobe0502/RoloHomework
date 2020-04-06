@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_frame"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_to_contracts_horizontal"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_input_bg"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="5dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_to_contracts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_input_bg"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_max="126dp"
+        app:layout_constraintHeight_min="66dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_hint_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/hint_to"
+        android:textColor="@color/color_7C8494"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/recyclerView_to_contracts"
+        app:layout_constraintTop_toTopOf="@id/recyclerView_to_contracts" />
+
+<!--    <android.support.design.widget.TextInputLayout-->
+<!--        android:id="@+id/textInput_to"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:background="@drawable/selector_input"-->
+<!--        android:paddingTop="5dp"-->
+<!--        app:hintTextAppearance="@style/TextLabel"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editText_to"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="52dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:hint="@string/hint_to"-->
+<!--            android:imeOptions="actionDone"-->
+<!--            android:inputType="text"-->
+<!--            android:maxLines="1"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:paddingEnd="16dp" />-->
+<!--    </android.support.design.widget.TextInputLayout>-->
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInput_subject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/selector_input"
+        android:paddingTop="5dp"
+        app:hintTextAppearance="@style/TextLabel"
+        app:layout_constraintEnd_toEndOf="@id/recyclerView_to_contracts"
+        app:layout_constraintStart_toStartOf="@id/recyclerView_to_contracts"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView_to_contracts">
+
+        <EditText
+            android:id="@+id/editText_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/hint_subject"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxHeight="65dp"
+            android:minHeight="52dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="6dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView_subject_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:textColor="@color/color_7C8494"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/textInput_subject"
+        app:layout_constraintEnd_toEndOf="@id/textInput_subject" />
+
+    <TextView
+        android:id="@+id/textView_hint_empty_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/hint_empty_message"
+        android:textColor="@color/color_C4C4C4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInput_subject" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/frame_message"
+        android:layout_width="0dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editText_message"
+                android:layout_width="match_parent"
+                android:layout_height="146dp"
+                android:background="@drawable/selector_message_input"
+                android:gravity="top"
+                android:hint="@string/hint_write_message"
+                android:paddingStart="30dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imageView_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/ic_send_disable_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/editText_message"
+                app:layout_constraintEnd_toEndOf="@id/editText_message" />
+
+            <ImageView
+                android:id="@+id/imageView_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="9dp"
+                android:background="@drawable/ic_fullscreen_black_24dp"
+                app:layout_constraintEnd_toEndOf="@id/editText_message"
+                app:layout_constraintTop_toTopOf="@id/editText_message" />
+
+            <TextView
+                android:id="@+id/textView_message_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:textColor="@color/color_7C8494"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/imageView_send"
+                app:layout_constraintEnd_toStartOf="@id/imageView_send"
+                app:layout_constraintTop_toTopOf="@id/imageView_send" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_contracts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/layout_leave_focus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView_to_contracts" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_leave_focus"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_leave_focus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rectangle_leave_focus_bg"
+            android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
